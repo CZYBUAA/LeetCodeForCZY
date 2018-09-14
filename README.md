@@ -1,0 +1,2 @@
+# LeetCodeForCZY
+Solution For LeetCode 
