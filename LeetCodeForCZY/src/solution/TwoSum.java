@@ -12,10 +12,7 @@ public class TwoSum {
 
 		// 先对数组nums进行排序
 		int[] sortNums = sort(nums);
-		for (int t : sortNums) {
-			System.out.println(t);
-		}
-		// 获取小于target值的最大下标
+		// 获取小于target值的最大下标,这个方法失效，需要重新想办法
 		//int i = 0;
 		//for (; i < sortNums.length && sortNums[i] <= target; i++)
 		//	continue;
@@ -38,7 +35,8 @@ public class TwoSum {
 
 		return null;
 	}
-
+	
+	//排序算法，简单选择排序，效率上吃亏，重改一下
 	public int[] sort(int[] nums) {
 		int temp = 0;
 		int[] sortNums = nums.clone();
@@ -60,6 +58,7 @@ public class TwoSum {
 		return sortNums;
 	}
 
+	//从左往右获取下标，找到第一个符合的数字时中断循环
 	public int getIndexFromLeft(int number, int[] nums) {
 		int index = 0;
 		for (int i = 0; i < nums.length; i++) {
@@ -70,7 +69,8 @@ public class TwoSum {
 		}
 		return index;
 	}
-
+	
+	//从右往左获取下标，找到第一个符合的数字时中断循环，功能上有些多余，看一下怎么优化
 	public static int getIndexFromRight(int number, int[] nums) {
 		int index = 0;
 		for (int i = nums.length - 1; i >= 0; i--) {
