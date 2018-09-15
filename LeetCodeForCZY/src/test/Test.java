@@ -1,39 +1,20 @@
 package test;
 
-import solution.ListNode;
-import solution.MergeTwoLists;
+import solution.RemoveDuplicates;
 
 public class Test {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
-		int[] arrays1= {2,2,4};
-		int[] arrays2= {1,3};
-		ListNode listNode1=intial(arrays1);
-		ListNode listNode2=intial(arrays2);
-		ListNode result=null;
-		
-		MergeTwoLists mtl=new MergeTwoLists();
-		result=mtl.mergeTwoLists(listNode1, listNode2);
-		
-		ListNode p=result;
-		while(p!=null){
-			System.out.print(p.val);
-			p=p.next;
-		}
-		
+		RemoveDuplicates rd=new RemoveDuplicates();
+		int[] nums= {0,1,2,2,2,2,2,2,2,2,3,3,4,5,6};
+		int len = rd.removeDuplicates(nums);
+
+		// 在函数里修改输入数组对于调用者是可见的。
+		// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
+		for (int i = 0; i < len; i++) {
+		    System.out.print(nums[i]);
+		}	
 	}
-	
-	public static ListNode intial(int[] arrays) {
-		if(arrays.length==0)
-			return null;
-		ListNode headNode=new ListNode(arrays[0]);
-		ListNode p=headNode;
-		for(int i=1;i<arrays.length;i++) {
-			p.next=new ListNode(arrays[i]);
-			p=p.next;
-		}
-		return headNode;
-	}
-	
+
 }
