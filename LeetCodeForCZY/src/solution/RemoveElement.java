@@ -6,7 +6,7 @@ public class RemoveElement {
         
         for(int i=0;i<result;i++) {				//注意这里不能用i<nums.length作为判定条件，因为数组有效长度是一直在变化的
         	if(nums[i]==val) {
-        		while( nums[result-1]==val) {
+        		while(result>0&&nums[result-1]==val) {
         			result--;
         		}
         		if(i<result) {
