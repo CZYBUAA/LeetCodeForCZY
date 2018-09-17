@@ -1,15 +1,14 @@
 package test;
 
-import solution.SearchInsert;
+import solution.LengthOfLastWord;
 
 public class Test {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
-		SearchInsert si=new SearchInsert();
-		int[] nums= {1};
-		int target=0;
-		int result=si.searchInsert(nums, target);
+		LengthOfLastWord lolw=new LengthOfLastWord();
+		String s=" ";
+		int result=lolw.lengthOfLastWord(s);
 		
 		System.out.println(result);
 	}
