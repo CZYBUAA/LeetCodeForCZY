@@ -1,16 +1,19 @@
 package test;
 
-import solution.LengthOfLastWord;
+import solution.PlusOne;
 
 public class Test {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
-		LengthOfLastWord lolw=new LengthOfLastWord();
-		String s=" ";
-		int result=lolw.lengthOfLastWord(s);
+		PlusOne po=new PlusOne();
+		int[] nums= {9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9};
+		int[] result=po.plusOne(nums);
 		
-		System.out.println(result);
+		for(int i:result) {
+			System.out.print(i);
+		}
+		
 	}
 
 }
